@@ -1,0 +1,177 @@
+/* Fonts */
+
+/* open-sans-300 - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'),
+        url('fonts/open-sans-v17-latin-300.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+
+/* open-sans-regular - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'),
+        url('fonts/open-sans-v17-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+
+/* open-sans-600 - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
+        url('fonts/open-sans-v17-latin-600.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+
+/* open-sans-700 - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'),
+        url('fonts/open-sans-v17-latin-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+
+/* For everything */
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.85);
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+.slt-menu {
+    background: rgba(0, 0, 0, 0.95);
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* For the sections */
+
+.slt-menu-header {
+    padding: 10px;
+    color: rgba(127, 255, 212, 0.8);
+}
+
+.slt-menu-body {
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 1rem 1rem 0rem 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    overflow: hidden;
+}
+
+.slt-menu-footer {
+    margin-top: auto;
+    padding-bottom: 5px;
+}
+
+a {
+    color: rgba(127, 255, 212, 0.8);
+}
+
+/* Generic Usage */
+
+.slt-text-center {
+    text-align: center;
+}
+
+.slt-overflow-hidden {
+    overflow: hidden;
+}
+
+.slt-text-nowrap {
+    white-space: nowrap;
+}
+
+.slt-d-inline-flex {
+    display: -webkit-inline-box;
+    display: inline-flex;
+}
+
+.slt-menu-body>.slt-d-inline-flex {
+    margin-top: 10px;
+}
+
+/* Switches */
+
+.slt-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+
+    /* Fix for this layout */
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.slt-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slt-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(204, 204, 204, 0.8);
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+
+    border-radius: 34px;
+}
+
+.slt-slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(255, 255, 255);
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+
+    border-radius: 50%;
+}
+
+input:checked+.slt-slider {
+    background-color: rgba(33, 149, 243, 0.8);
+}
+
+input:focus+.slt-slider {
+    -webkit-box-shadow: 0 0 1px rgba(33, 149, 243, 0.8);
+    box-shadow: 0 0 1px rgba(33, 149, 243, 0.8);
+}
+
+input:checked+.slt-slider:before {
+    -webkit-transform: translateX(29px);
+    transform: translateX(29px);
+}
