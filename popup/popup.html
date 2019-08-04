@@ -1,14 +1,16 @@
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 
 <head>
     <link rel="stylesheet" href="popup.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 
 <body>
 
     <!-- Menu -->
 
-    <div id="slt-menu" class="slt-menu">
+    <div id="slt-menu" class="slt-menu slt-no-select">
 
         <div class="slt-menu-header">
             <h2 class="slt-text-center">Steam Little Toolkit Settings</h2>
@@ -16,10 +18,11 @@
 
         <div class="slt-menu-body">
 
-            <table>
-                <tr>
+            <table id="settingsTable">
 
-                    <!-- Examples -->
+                <!-- Examples 
+
+                <tr>
 
                     <td>
                         Use menu?
@@ -29,28 +32,26 @@
                         </label>
                     </td>
 
-                    <!--  -->
-
                     <td>
-                        Bypass Link Filter
+                        Use menu?
                         <label class="slt-switch">
-                            <input id="sltbypassLinkFilterSetting" type="checkbox">
+                            <input id="sltuseMenuSetting" type="checkbox">
                             <span class="slt-slider"></span>
                         </label>
                     </td>
 
-                    <!--  -->
-
                     <td>
-                        Bypass Age Check
+                        Use menu?
                         <label class="slt-switch">
-                            <input id="sltbypassAgeCheckSetting" type="checkbox">
+                            <input id="sltuseMenuSetting" type="checkbox">
                             <span class="slt-slider"></span>
                         </label>
                     </td>
 
 
                 </tr>
+
+                -->
 
             </table>
 
@@ -65,6 +66,8 @@
 
 
     </div>
+
+    <script src="popup.js"></script>
 
 </body>
 

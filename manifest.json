@@ -8,7 +8,9 @@
     "homepage_url": "https://github.com/VoidlessSeven7/steam-little-toolkit/",
 
     "icons": {
+        "32": "icons/steam_32.png",
         "48": "icons/steam_48.png",
+        "64": "icons/steam_64.png",
         "98": "icons/steam_98.png"
     },
 
@@ -27,9 +29,20 @@
         "page": "popup/popup.html"
     },
 
+    "background": {
+        "scripts": ["background.js"]
+    },
+
     "content_scripts": [{
         "matches": ["*://store.steampowered.com/*"],
         "js": ["./assets/js/jquery-3.4.1.min.js", "slt.js"]
-    }]
+    }],
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "addon@example.com",
+            "strict_min_version": "42.0"
+        }
+    }
 
 }

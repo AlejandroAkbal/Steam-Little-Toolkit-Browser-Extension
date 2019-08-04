@@ -1,50 +1,35 @@
-'use strict';
-
-browser.storage.local.set({
-    userSettings: {
-        name: "Mog",
-        eats: "mice"
-    }
-});
-
-
-
-
-
-// Saving options
-function saveOptions(e) {
-    browser.storage.local.set({
-        color: document.querySelector("#color").value
-    });
-}
-
-// Restore options
 function restoreOptions() {
-    browser.storage.local.get("userSettings", (settings) => {
 
-        console.log(settings);
+    chrome.storage.sync.get('globalUserSettings', (data) => {
+
+        const entries = Object.entries(data.globalUserSettings);
+
+        //alert(entries); 
+        //console.log(entries);
+
+        for (let key of entries) {
+            // console.log(key[1]);
+            // console.log(data.globalUserSettings[key]);
+            // console.log(`${key[1].id} : ${key[1].value} : ${key[1].name}`);
+
+
+            // Making the form 
+            let isChecked = "";
+            if (key[1].value === true) { isChecked = 'checked="true"'; }
+
+            let htmlChunk = `<td>${key[1].name}<label class="slt-switch"><input id="${key[1].id}" type="checkbox" ${isChecked}><span class="slt-slider"></span></label></td>`;
+
+            document.getElementById("settingsTable").innerHTML += htmlChunk;
+
+        }
+
+
     });
+
 }
 
-// Successful retrieve items from object
-function onGot(item) {
-    console.log(item);
-}
+// Faltan listeners de cambio de settings
 
 
-// Failed retrieve items from object
-function onError(error) {
-    console.log(`Error: ${error}`);
-}
 
-let gettingItem = browser.storage.local.get();
-
-gettingItem.then(onGot, onError);
-
-
-// Retrieve items from object
 document.addEventListener("DOMContentLoaded", restoreOptions);
-
-
-// Listener WIP
-document.querySelector("input").addEventListener("change", saveOptions);
