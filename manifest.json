@@ -2,16 +2,16 @@
 
     "manifest_version": 2,
     "name": "Steam Little Toolkit",
-    "version": "1.0",
+    "version": "1.01",
 
     "description": "Modifies the Steam store to make a better experience, works best with the SteamDB Extension, find all the utilites by reading the settings!",
     "homepage_url": "https://github.com/VoidlessSeven7/steam-little-toolkit/",
 
     "icons": {
-        "32": "icons/steam_32.png",
-        "48": "icons/steam_48.png",
-        "64": "icons/steam_64.png",
-        "98": "icons/steam_98.png"
+        "32": "assets/images/icons/steam_32.png",
+        "48": "assets/images/icons/steam_48.png",
+        "64": "assets/images/icons/steam_64.png",
+        "98": "assets/images/icons/steam_98.png"
     },
 
     "permissions": [
@@ -20,27 +20,27 @@
     ],
 
     "browser_action": {
-        "default_icon": "icons/steam_32.png",
+        "default_icon": "assets/images/icons/steam_64.png",
         "default_title": "Steam Little Toolkit",
-        "default_popup": "popup/popup.html"
+        "default_popup": "./assets/html/popup.html"
     },
 
     "options_ui": {
-        "page": "popup/popup.html"
+        "page": "./assets/html/popup/popup.html"
     },
 
     "background": {
-        "scripts": ["background.js"]
+        "scripts": ["./assets/js/background.js"]
     },
 
     "content_scripts": [{
         "matches": ["*://store.steampowered.com/*"],
-        "js": ["./assets/js/jquery-3.4.1.min.js", "slt.js"]
+        "js": ["./assets/js/jquery-3.4.1.min.js", "./assets/js/content_script.js"]
     }],
 
     "browser_specific_settings": {
         "gecko": {
-            "id": "addon@example.com",
+            "id": "slt.extension@akbal.dev",
             "strict_min_version": "42.0"
         }
     }
