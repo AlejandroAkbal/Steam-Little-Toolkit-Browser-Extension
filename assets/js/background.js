@@ -1,13 +1,13 @@
 /* ----------------- Defaults ----------------- */
 
 let defaultUserSettings = [
-    { id: "bypassLinkFilter", value: true, name: "Bypass Link Filter" },
-    { id: "bypassAgeCheck", value: false, name: "Bypass Age Check" },
-    { id: "removeOwned", value: true, name: "Remove Owned Games" },
-    { id: "removeIgnored", value: false, name: "remove Ignored Games" },
-    { id: "removeOwnedRecentlyUpdatedList", value: false, name: "remove Owned on Recently Updated" },
-    { id: "removeIgnoredRecentlyUpdatedList", value: false, name: "Remove Ignored on Recently Updated" },
-    { id: "removeLiveStreams", value: true, name: "Remove Livestreams" }
+    { id: "bypassLinkFilter", value: true, name: "Bypass link filter" },
+    { id: "bypassAgeCheck", value: false, name: "Bypass age check" },
+    { id: "removeOwned", value: true, name: "Remove owned games" },
+    { id: "removeIgnored", value: false, name: "Remove ignored games" },
+    { id: "removeOwnedRecentlyUpdatedList", value: false, name: "Remove owned on recently updated" },
+    { id: "removeIgnoredRecentlyUpdatedList", value: false, name: "Remove ignored on recently updated" },
+    { id: "removeLiveStreams", value: true, name: "Remove livestreams" }
 ];
 
 /* ----------------- Main ----------------- */
