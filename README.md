@@ -27,5 +27,6 @@ Find all the utilites by reading the settings!
 Browser development
 ```
 npm install -g web-ext
-web-ext run --firefox="C:\Program Files\Firefox Developer Edition\firefox.exe"
+web-ext lint
+web-ext run --firefox="C:\Program Files\Firefox Developer Edition\firefox.exe" --firefox-profile=Extensiones
 ```

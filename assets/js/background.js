@@ -31,12 +31,10 @@ function populateSettingsIfUndefined() {
 
         /* ----- Repopulate the setting if it doesnt exist ----- */
 
-        const globalEntries = Object.entries(data.globalUserSettings);
-        const defaultEntries = Object.entries(defaultUserSettings);
+        const globalEntries = Object.keys(data.globalUserSettings);
+        const defaultEntries = Object.keys(defaultUserSettings);
 
-        // console.log(globalEntries);
-        // console.log(consolePrefix);
-        // console.log(defaultEntries);
+        // console.log(globalEntries); console.log(consolePrefix); console.log(defaultEntries);
 
         if (JSON.stringify(globalEntries) === JSON.stringify(defaultEntries)) {
             console.log(`${consolePrefix}Every setting is okay`);
@@ -58,7 +56,7 @@ document.addEventListener("DOMContentLoaded", populateSettingsIfUndefined);
 
 /* ----------------- General Utilities ----------------- */
 
-// Tests an object to see if its empty or not
+/* ----- Tests an object to see if its empty or not ----- */
 function isEmpty(obj) {
     for (var key in obj) {
         if (obj.hasOwnProperty(key))
@@ -67,19 +65,28 @@ function isEmpty(obj) {
     return true;
 }
 
-// Resets all settings on storage to default state
+/* -----  Resets all settings on storage to default state ----- */
 function resetAllSettings() {
     chrome.storage.sync.set({ 'globalUserSettings': defaultUserSettings });
 }
 
-// Removes all settings saved on storage
+/* -----  Removes all settings saved on storage ----- */
 function removeAllSettings() {
     chrome.storage.sync.remove('globalUserSettings');
 }
 
-// Just to have a nicer console
+/* -----  Just to have a nicer console ----- */
 let consolePrefix = `
 -==o==- Steam Little Toolkit -==o==-
 
-`;
-// console.log(consolePrefix);
+`; // console.log(consolePrefix);
+
+/* ----- Utility for debugging ----- */
+function logDatabase() {
+    chrome.storage.sync.get('globalUserSettings', (data) => {
+
+        console.log(data);
+
+    });
+
+}
