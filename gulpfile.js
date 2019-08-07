@@ -150,13 +150,22 @@ exports.jsminify = jsMinify;
 // ----------- Utilities ----------- //
 
 function moveManifest() {
-    out = ".dist/";
+    let dirDistributionAlt = "./dist/";
 
     return gulp
-        .src([".src/*.json"])
-        .pipe(gulp.dest(out));
+        .src(["./src/*.json"])
+        .pipe(gulp.dest(dirDistributionAlt));
 }
 exports.moveManifest = moveManifest;
+
+function moveFonts() {
+    out = dirDistribution + "fonts/";
+
+    return gulp
+        .src([dirSource + "fonts/*"])
+        .pipe(gulp.dest(out));
+}
+exports.moveFonts = moveFonts;
 
 // Delete production directory
 function clean() {
@@ -166,4 +175,4 @@ exports.clean = clean;
 
 // ----------- Utilities for developing ----------- // 
 
-exports.build = gulp.series(clean, moveManifest, html, cssCompile, jsCompile, gulp.parallel(cssMinify, jsMinify, images));
+exports.build = gulp.series(clean, html, cssCompile, jsCompile, gulp.parallel(cssMinify, jsMinify, images, moveManifest, moveFonts));
