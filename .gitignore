@@ -1,6 +1,6 @@
 node_modules
 dist
-Mozilla/assets
-Mozilla/gulpfile.js
-Mozilla/manifest.json
-Mozilla/package.json
+Publishing/Mozilla/src/assets
+Publishing/Mozilla/gulpfile.js
+Publishing/Mozilla/src/manifest.json
+Publishing/Mozilla/package.json
