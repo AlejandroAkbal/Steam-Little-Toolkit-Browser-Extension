@@ -14,6 +14,7 @@ The graphical menu
 ![Menu](README/images/Graphical_Menu.PNG)
 
 Console Notifications
+
 ![Notifications](README/images/Notifications.PNG)
 
 ## List of features
@@ -41,4 +42,11 @@ npm install -g web-ext
 web-ext lint
 cd ./src
 web-ext run --firefox="C:\Program Files\Firefox Developer Edition\firefox.exe" --firefox-profile=Extensiones
+```
+
+## Gulp
+Final build
+```
+npm install
+gulp build
 ```

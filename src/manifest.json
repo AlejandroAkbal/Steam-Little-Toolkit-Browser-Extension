@@ -11,7 +11,8 @@
         "32": "assets/images/icons/steam_32.png",
         "48": "assets/images/icons/steam_48.png",
         "64": "assets/images/icons/steam_64.png",
-        "98": "assets/images/icons/steam_98.png"
+        "98": "assets/images/icons/steam_98.png",
+        "128": "assets/images/icons/steam_98.png"
     },
 
     "permissions": [
