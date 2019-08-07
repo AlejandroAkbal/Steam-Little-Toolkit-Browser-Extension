@@ -27,15 +27,6 @@
         url('../fonts/open-sans-v17-latin-600.woff2') format('woff2');
 }
 
-/* open-sans-700 - latin */
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    src: local('Open Sans Bold'), local('OpenSans-Bold'),
-        url('../fonts/open-sans-v17-latin-700.woff2') format('woff2');
-}
-
 /* For everything */
 
 html,

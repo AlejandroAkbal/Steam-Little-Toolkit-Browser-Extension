@@ -57,22 +57,20 @@ function addListenerToOptions() {
             checkBox.addEventListener("change", function () {
 
                 if (this.checked) {
-                    // console.log("True"); // console.log(this.id); // console.log(key); // 
-                    console.log(temporaryUserSettings.globalUserSettings[key[0]].value);
+                    // console.log("True"); // console.log(this.id); // console.log(key); // console.log(temporaryUserSettings.globalUserSettings[key[0]].value);
 
                     temporaryUserSettings.globalUserSettings[key[0]].value = true;
-                    console.log(temporaryUserSettings.globalUserSettings[key[0]].value);
+                    // console.log(temporaryUserSettings.globalUserSettings[key[0]].value);
 
                     chrome.storage.sync.set({ 'globalUserSettings': temporaryUserSettings.globalUserSettings });
 
                 }
 
                 else if (!this.checked) {
-                    // console.log("False"); // console.log(this.id); // console.log(key); // 
-                    console.log(temporaryUserSettings.globalUserSettings[key[0]].value);
+                    // console.log("False"); // console.log(this.id); // console.log(key); // console.log(temporaryUserSettings.globalUserSettings[key[0]].value);
 
                     temporaryUserSettings.globalUserSettings[key[0]].value = false;
-                    console.log(temporaryUserSettings.globalUserSettings[key[0]].value);
+                    // console.log(temporaryUserSettings.globalUserSettings[key[0]].value);
 
                     chrome.storage.sync.set({ 'globalUserSettings': temporaryUserSettings.globalUserSettings });
 

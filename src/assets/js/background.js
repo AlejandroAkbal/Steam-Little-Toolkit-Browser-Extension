@@ -1,13 +1,19 @@
 /* ----------------- Defaults ----------------- */
 
+const consolePrefix = `
+-==o==- Steam Little Toolkit -==o==-
+
+`;
+
 let defaultUserSettings = [
-    { id: "bypassLinkFilter", value: true, name: "Bypass link filter" },
-    { id: "bypassAgeCheck", value: false, name: "Bypass age check" },
+
     { id: "removeOwned", value: true, name: "Remove owned games" },
     { id: "removeIgnored", value: false, name: "Remove ignored games" },
+    { id: "removeLiveStreams", value: true, name: "Remove livestreams" },
     { id: "removeOwnedRecentlyUpdatedList", value: false, name: "Remove owned on recently updated" },
     { id: "removeIgnoredRecentlyUpdatedList", value: false, name: "Remove ignored on recently updated" },
-    { id: "removeLiveStreams", value: true, name: "Remove livestreams" }
+    { id: "bypassLinkFilter", value: true, name: "Bypass link filter" },
+    { id: "bypassAgeCheck", value: false, name: "Bypass age check" }
 ];
 
 /* ----------------- Main ----------------- */
@@ -75,18 +81,3 @@ function removeAllSettings() {
     chrome.storage.sync.remove('globalUserSettings');
 }
 
-/* -----  Just to have a nicer console ----- */
-let consolePrefix = `
--==o==- Steam Little Toolkit -==o==-
-
-`; // console.log(consolePrefix);
-
-/* ----- Utility for debugging ----- */
-function logDatabase() {
-    chrome.storage.sync.get('globalUserSettings', (data) => {
-
-        console.log(data);
-
-    });
-
-}
