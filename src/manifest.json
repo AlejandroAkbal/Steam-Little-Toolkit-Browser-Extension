@@ -2,9 +2,9 @@
 
     "manifest_version": 2,
     "name": "Steam Little Toolkit",
-    "version": "1.16",
+    "version": "1.17",
 
-    "description": "Tweaks the Steam store to make it better experience, complete your experience with the SteamDB Extension!",
+    "description": "Tweaks the Steam store to make a better experience, complete your experience with the SteamDB Extension!",
     "homepage_url": "https://github.com/VoidlessSeven7/Steam-Little-Toolkit-Browser-Extension/",
 
     "icons": {

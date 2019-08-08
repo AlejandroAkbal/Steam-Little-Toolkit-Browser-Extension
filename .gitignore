@@ -1,4 +1,4 @@
 node_modules
 dist
-Publishing/Mozilla/*
-!Publishing/Mozilla/readme.txt
+publishing/Mozilla/*
+!publishing/Mozilla/readme.txt
