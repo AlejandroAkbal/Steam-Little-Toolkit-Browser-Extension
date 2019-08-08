@@ -31,8 +31,13 @@
 
 html,
 body {
-    height: 100%;
-    width: 100%;
+    /* For Firefox
+    min-height: 100%;
+    min-width: 100%; */
+
+    /* For Chrome */
+    min-height: fit-content;
+    min-width: 650px;
 
     margin: 0px;
     padding: 0px;
@@ -44,15 +49,12 @@ body {
 
 .slt-menu {
     background: rgba(0, 0, 0, 0.95);
-
-    display: flex;
-    flex-direction: column;
 }
 
 /* For the sections */
 
 .slt-menu-header {
-    padding: 10px;
+    padding: 7px;
     color: rgba(127, 255, 212, 0.8);
 }
 
@@ -60,20 +62,11 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.6);
     padding: 1rem 1rem 0rem 1rem;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-
-    overflow: hidden;
-
-    font-weight: 400;
     font-size: 75%;
 }
 
 .slt-menu-footer {
-    margin-top: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0px 0px 1px 0px;
 }
 
 a {
@@ -90,21 +83,8 @@ a {
     text-align: center;
 }
 
-.slt-overflow-hidden {
-    overflow: hidden;
-}
-
 .slt-text-nowrap {
     white-space: nowrap;
-}
-
-.slt-d-inline-flex {
-    display: -webkit-inline-box;
-    display: inline-flex;
-}
-
-.slt-menu-body>.slt-d-inline-flex {
-    margin-top: 10px;
 }
 
 /* Switches */
@@ -116,7 +96,7 @@ a {
     height: 20px;
 
     /* Fix for this layout */
-    margin: auto 8px 12px 8px;
+    margin: 10px 8px 10px 8px;
 }
 
 .slt-switch input {
