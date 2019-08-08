@@ -1,5 +1,5 @@
-Instructions:
-To build an exact copy, execute the commands:
+Firefox instructions:
+To build an exact copy, execute the following commands on the base of the unzipped zip:
 
 npm install
 gulp build

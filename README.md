@@ -1,11 +1,11 @@
 # Steam Little Toolkit browser extension
-Tweaks the Steam store to make it better experience
+Tweaks the Steam store to make it a better experience
 
 Works best with the [SteamDB Extension](https://steamdb.info/extension/)!.
 
 Find all the utilites by reading the settings!
 
-**Download the script for [Mozilla Firefox](https://example.com) or for [Google Chrome](https://example.com)**
+**Download the script for [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/steam-little-toolkit/) or for [Google Chrome](https://example.com)**
 
 
 ## Images
@@ -34,6 +34,8 @@ Console Notifications
 - [ ] If a setting is added, add it to the current menu instead of replacing to the default one
 - [ ] Add OS notifications for when the settings are replaced by the default ones
 - [ ] Add toggle to disable the beg for money
+- [ ] Tweak the CSS so the transition to Chrome extension is easier
+- [ ] Make a script with web-ext that automatically uploads the src and dist folder and uploads them to AMO 
 
 ## Web-Ext
 Browser development
