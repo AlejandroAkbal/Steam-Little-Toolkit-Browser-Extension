@@ -5,7 +5,7 @@ Works best with the [SteamDB Extension](https://steamdb.info/extension/)!
 
 Find all the utilites by reading the settings!
 
-**Download the script for [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/steam-little-toolkit/) or for [Google Chrome](https://example.com)**
+**Download the script for [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/steam-little-toolkit/) or for [Google Chrome](https://chrome.google.com/webstore/detail/steam-little-toolkit/pnhdnmabfhccfeopkagnbddebnkamkfk?hl=es)**
 
 
 ## Images
@@ -38,13 +38,14 @@ Console Notifications
 - [ ] Add toggle to disable the beg for money
 - [ ] Inject HTML code with javascript and not unsafe variables
 - [ ] Welcome page or settings page when installed
-- [ ] Publish on chrome addon platform
+
 
 ### Completed
 
 - [x] Make a script with web-ext that automatically zips the src and dist folder and uploads them to AMO
 - [x] Tweak the CSS so the transition to Chrome extension is easier
 - [x] Publish on https://addons.mozilla.org/
+- [x] Publish on https://chrome.google.com/webstore/category/extensions
 
 
 ## Web-Ext
