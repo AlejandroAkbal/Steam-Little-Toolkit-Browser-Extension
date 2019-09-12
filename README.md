@@ -32,7 +32,6 @@ Console Notifications
 - [ ] Remove games when an event happens, not every **x** seconds
 - [ ] Option to ignore owned/ignored games while viewing bundles
 - [ ] Option to pause livestreams instead of deleting them
-- [ ] Fix owned/ignored games being deleted from search results
 - [ ] If a setting is added, add it to the current menu instead of replacing to the default one
 - [ ] Add OS notifications for when the settings are replaced by the default ones
 - [ ] Add toggle to disable the beg for money
@@ -40,8 +39,13 @@ Console Notifications
 - [ ] Welcome page or settings page when installed
 
 
+
 ### Completed
 
+- [x] Fix owned/ignored games being deleted from search results
+- [x] On the comment section while viewing a game, automatically click "your languages" (Added very poorly but added it)
+- [x] Implement a colorful way to log messages to console
+- [x] Better description of the settings on hovering
 - [x] Make a script with web-ext that automatically zips the src and dist folder and uploads them to AMO
 - [x] Tweak the CSS so the transition to Chrome extension is easier
 - [x] Publish on https://addons.mozilla.org/

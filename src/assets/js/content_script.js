@@ -65,6 +65,16 @@ function contentScript() {
 
         }
 
+        /* ----- Category: Viewing Games Pages ----- */
+
+        if (urlContains('app') > -1) {
+            // console.log("We are on a game page");
+
+            /* ----- Automatically view all languages on games reviews ----- */
+            if (searchInDatabase("viewAllLanguages", true)) { viewAllLanguages(); }
+
+        }
+
         /* ----- Category: Always executed ----- */ //
         if (searchInDatabase("removeLiveStreams", true)) { removeLiveStreams(); }
 
@@ -88,14 +98,14 @@ function contentScript() {
 
     function bypassLinkFilter() {
 
-        console.log(`${consolePrefix}Bypassing Link Filter`);
+        logToConsole("Bypassing Link Filter");
         window.location = String(window.location).substr(43);
 
     }
 
     function bypassAgeCheck() {
 
-        console.log(`${consolePrefix}Bypassing Age Check`);
+        logToConsole("Bypassing Age Check");
 
         // Check if its only a continue button or a form with real age check
         const formAgeYear = document.getElementById('ageYear');
@@ -108,37 +118,52 @@ function contentScript() {
 
     function removeOwnedGames() {
 
-        console.log(`${consolePrefix}Removing owned games`);
-        removeElements(document.querySelectorAll(".ds_owned"));
+        logToConsole("Removing owned games");
+        removeElements(document.querySelectorAll(".ds_owned:not(.match)"));
+        // Removes all elements with the class ds_owned but not if the element has the class match
 
     }
 
     function removeIgnoredGames() {
 
-        console.log(`${consolePrefix}Removing ignored games`);
+        logToConsole("Removing ignored games");
         removeElements(document.querySelectorAll(".ds_ignored"));
 
     }
 
     function removeUpdatedOwnedGames() {
 
-        console.log(`${consolePrefix}Removing owned games on recently updated`);
+        logToConsole("Removing owned games on recently updated");
         removeElements(document.querySelectorAll(".ds_owned"));
 
     }
 
     function removeUpdatedIgnoredGames() {
 
-        console.log(`${consolePrefix}Removing ignored games on recently updated`);
+        logToConsole("Removing ignored games on recently updated");
         removeElements(document.querySelectorAll(".ds_ignored"));
 
     }
 
     function removeLiveStreams() {
 
-        console.log(`${consolePrefix}Removing livestreams`);
+        logToConsole("Removing livestreams");
         removeElements(document.querySelectorAll("#application_root"));
         removeElements(document.querySelectorAll(".home_ctn.live_streams_ctn.no_paging"));
+
+    }
+
+    function viewAllLanguages() {
+
+        if (counter <= 2) {
+
+            logToConsole("Viewing all languages");
+            document.getElementById("reviews_filter_language").click();
+
+            // Workaround until I add a event-driven method
+            counter++;
+
+        }
 
     }
 
@@ -164,3 +189,5 @@ function contentScript() {
 setTimeout(contentScript, 500);
 
 setInterval(contentScript, 3000);
+
+let counter = 0;

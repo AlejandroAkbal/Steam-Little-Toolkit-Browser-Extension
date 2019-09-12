@@ -17,7 +17,7 @@ function restoreOptions() {
             if (key[1].value === true) { isChecked = 'checked="true"'; }
 
             /* ----- Filling the table ----- */
-            let htmlChunk = `<td><label class="slt-switch"><input id="${key[1].id}" type="checkbox" ${isChecked}><span class="slt-slider"></span></label>${key[1].name}</td>`;
+            let htmlChunk = `<td title="${key[1].title}"><label class="slt-switch"><input id="${key[1].id}" type="checkbox" ${isChecked}><span class="slt-slider"></span></label>${key[1].name}</td>`;
 
             /* ----- Separating into three cells per table row ----- */
             if (trCounter === 0) { /* console.log("Opertura"); */ fullHtmlChunk += "<tr>" + htmlChunk; }

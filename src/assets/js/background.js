@@ -1,19 +1,15 @@
 /* ----------------- Defaults ----------------- */
 
-const consolePrefix = `
--==o==- Steam Little Toolkit -==o==-
-
-`;
-
 let defaultUserSettings = [
 
-    { id: "removeOwned", value: true, name: "Remove owned games" },
-    { id: "removeIgnored", value: false, name: "Remove ignored games" },
-    { id: "removeLiveStreams", value: true, name: "Remove livestreams" },
-    { id: "removeOwnedRecentlyUpdatedList", value: false, name: "Remove owned on recently updated" },
-    { id: "removeIgnoredRecentlyUpdatedList", value: false, name: "Remove ignored on recently updated" },
-    { id: "bypassLinkFilter", value: true, name: "Bypass link filter" },
-    { id: "bypassAgeCheck", value: false, name: "Bypass age check" }
+    { id: "removeOwned", value: true, name: "Remove owned games", title: "Removes owned games from the Steam storefront" },
+    { id: "removeIgnored", value: false, name: "Remove ignored games", title: "Removes ignored games from the Steam storefront" },
+    { id: "removeLiveStreams", value: true, name: "Remove livestreams", title: "Removes livestreams from the entire Steam storefront" },
+    { id: "removeOwnedRecentlyUpdatedList", value: false, name: "Rem. owned on recently updated", title: "Removes owned games on the recently updated section" },
+    { id: "removeIgnoredRecentlyUpdatedList", value: false, name: "Rem. ignored on recently updated", title: "Removes ignored games on the recently updated section" },
+    { id: "viewAllLanguages", value: false, name: "All lang. on reviews", title: "Automatically shows all the languages for game's reviews" },
+    { id: "bypassLinkFilter", value: true, name: "Bypass link filter", title: "Automatically bypasses the Steam external url link filter" },
+    { id: "bypassAgeCheck", value: false, name: "Bypass age check", title: "Automatically bypasses the Steam Age Check Filter" }
 ];
 
 /* ----------------- Main ----------------- */
@@ -26,7 +22,7 @@ function populateSettingsIfUndefined() {
 
         if (isEmpty(data)) {
 
-            console.log(`${consolePrefix}Setting to default all settings`);
+            logToConsole("Setting to default all settings");
             resetAllSettings();
 
             // Rerun cause data has to update
@@ -43,10 +39,10 @@ function populateSettingsIfUndefined() {
         // console.log(globalEntries); console.log(consolePrefix); console.log(defaultEntries);
 
         if (JSON.stringify(globalEntries) === JSON.stringify(defaultEntries)) {
-            console.log(`${consolePrefix}Every setting is okay`);
+            logToConsole("Every setting is okay");
         }
         else { // TODO: Implementar que si una setting especifica no existe, crearla, en vez de eliminarlo todo
-            console.log(`${consolePrefix}Detected mismatch, resetting to default`);
+            logToConsole("Detected mismatch, resetting to default");
             resetAllSettings();
         }
 
