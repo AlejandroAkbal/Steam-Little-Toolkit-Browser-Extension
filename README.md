@@ -73,3 +73,9 @@ Build on windows 10 with
 .\scripts\buildDist.ps1
 .\scripts\buildSrc.ps1
 ```
+
+Maybe you'll need to execute this before
+```
+Get-ExecutionPolicy
+Set-ExecutionPolicy Unrestricted
+```
