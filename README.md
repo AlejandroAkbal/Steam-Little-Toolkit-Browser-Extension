@@ -37,6 +37,8 @@ Console Notifications
 - [ ] Add toggle to disable the beg for money
 - [ ] Inject HTML code with javascript and not unsafe variables
 - [ ] Welcome page or settings page when installed
+- [ ] If failing to achieve the event-driven removing, have a slider for the seconds between removes
+- [ ] Recolect stats 
 
 
 
