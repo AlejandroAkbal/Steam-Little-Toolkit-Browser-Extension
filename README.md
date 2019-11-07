@@ -66,7 +66,7 @@ web-ext run --firefox="C:\Program Files\Firefox Developer Edition\firefox.exe" -
 Final build
 ```
 npm install
-gulp build
+npx gulp build
 ```
 
 ## Publishing
