@@ -58,8 +58,8 @@ Console Notifications
 Browser development
 ```
 npm install -g web-ext
-web-ext lint
-web-ext run --firefox="C:\Program Files\Firefox Developer Edition\firefox.exe" --firefox-profile=Extensiones --source-dir=src
+web-ext lint --source-dir=src
+web-ext run --firefox="C:\Program Files\Firefox Developer Edition\firefox.exe" --firefox-profile=default --source-dir=src
 ```
 
 ## Gulp
