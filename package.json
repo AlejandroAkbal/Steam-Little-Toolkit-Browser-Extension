@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/VoidlessSeven7/Steam-Little-Toolkit-Browser-Extension#readme",
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^1.3.0",
+    "@fullhuman/postcss-purgecss": "^2.0.4",
     "autoprefixer": "^9.7.3",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
