@@ -16,9 +16,11 @@ Download the extension on
 ## Images
 
 Menu
+
 ![Menu](README/images/Graphical_Menu.PNG)
 
 Console Notifications
+
 ![Notifications](README/images/Notifications.PNG)
 
 ## List of features
